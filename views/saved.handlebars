@@ -1,0 +1,36 @@
+<!--Saved Movies-->
+<div class="jumbotron">
+    <div class="text-center">
+        <h1>UPCOMING MOVIES ON IMDB</h1>
+        <h2><i>Check Out What You've Saved!</i></h2>
+    </div>
+</div>
+<div>
+    {{#if article}}
+        {{#each article}}
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 style="text-align:center;">{{this.title}}</h3>
+                </div>
+                <div class="panel-body">
+                    <p>{{this.summary}}</p>
+                    <ul style="list-style-type:none;padding-left: 0;">
+                        <li><a href={{this.link}} target="_blank"><i class="fa fa-film" aria-hidden="true"></i> View on IMDB</a></li>
+                        <li><a class="delete" href="" data-id={{this._id}}><i class="fa fa-trash" aria-hidden="true"></i> Remove Movie</a></li>
+                        <li><a class="note" id="all-notes" href="" data-toggle="modal" data-target="#noteModal{{this._id}}" data-id={{this._id}}><i class="fa fa-sticky-note" aria-hidden="true"></i> Notes</a></li>
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Uh Oh. Looks like we don't have any saved movies.</h4>
+            </div>
+        </div>
+    {{/if}}
+</div>
+
+{{#each article}}
+    {{> note-modal }}
+{{/each}}

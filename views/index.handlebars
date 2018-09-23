@@ -1,0 +1,31 @@
+<!--Homepage-->
+<div class="jumbotron">
+    <div class="text-center">
+        <h1>UPCOMING MOVIES ON IMDB</h1>
+        <h2><i>Check Out What's Coming Soon!</i></h2>
+    </div>
+</div>
+<div>
+    {{#if article}}
+        {{#each article}}
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 style="text-align:center;">{{this.title}}</h3>
+            </div>
+            <div class="panel-body">
+                <p>{{this.summary}}</p>
+                <ul style="list-style-type:none;padding-left: 0;">
+                    <li><a href={{this.link}} target="_blank"><i class="fa fa-film" aria-hidden="true"></i> View on IMDB</a></li>
+                    <li><a class="save" href="" data-id={{this._id}}><i class="fa fa-save" aria-hidden="true"></i> Save Movie</a></li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+    {{else}}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>Uh Oh. Looks like we don't have any new movies.</h4>
+        </div>
+    </div>
+    {{/if}}
+</div>

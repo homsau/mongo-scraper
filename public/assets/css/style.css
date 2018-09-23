@@ -1,0 +1,37 @@
+.full-size {
+    max-width: 100% !important;
+    padding: 0 40px !important;
+}
+.navbar {
+    display: inline-block !important;
+    text-align: center;
+}
+.navbar-normal {
+    display: inline-block !important;
+}
+.nav-item {
+    line-height: 40px;
+    padding-right: 10px;
+}
+.panel {
+    margin: 20px 0;
+    border-radius: 15px;
+    background-color: #ccc;
+}
+.panel .panel-heading {
+    padding: 10px 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #555;
+    color: #fff;
+}
+.panel .panel-body {
+    padding: 20px;
+}
+
+.modal-dialog {
+    max-width: 80% !important;
+}
+.modal-dialog .deletenote {
+    
+}
