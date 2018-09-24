@@ -5,6 +5,8 @@ This app scrapes the most recent movie trailers from IMDB and lets users save mo
 
 ![Gif app-scrape](/public/assets/img/scrape.gif)
 
+![Gif notes](/public/assets/img/note-save-delete.gif)
+
 ## Demo
 ---
 You can view the demo on Heroku [here!](https://gt-mongo-scraper.herokuapp.com/)
