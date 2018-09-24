@@ -1,17 +1,78 @@
 .full-size {
     max-width: 100% !important;
-    padding: 0 40px !important;
+    padding: 0px !important;
 }
-.navbar {
-    display: inline-block !important;
+.full-size .col-lg-12:not(#navbar) > div:not(.jumbotron) {
+    padding: 0px 40px !important;
+}
+.jumbotron {
+    /*background-image: url("/assets/img/hdr.png");
+    background-size: 1000px 230px;
+    background-position: center;*/
+    border-radius: 0 !important;
+}
+#navbar {
     text-align: center;
+    height: 60px;
+    line-height: 60px;
 }
+.navbar-nav,
 .navbar-normal {
-    display: inline-block !important;
+    /* display: inline-block !important; */
+    width: 100% !important;
+    background-color: rgba(255,255,255,1) !important;
+}
+.navbar-nav li {
+    border-bottom: solid 1px #ced4da;
+}
+.navbar-nav li:hover, .navbar-nav li:hover a, .navbar-nav li:hover button {
+    background-color: #007bff;
+    color: #fff;
+}
+.navbar-nav li:last-child {
+    border-bottom: none;
 }
 .nav-item {
     line-height: 40px;
     padding-right: 10px;
+}
+.nav-item button {
+    background: transparent !important;
+    border: none;
+    color: #007bff;
+}
+.hamburger {
+    display: none;
+    z-index: 16;
+    text-shadow: 1.5px 1.5px 2px #fff;
+}
+.navigation {
+    /* position: fixed !important; */
+    /* overflow-y: scroll; */
+    /* top: 0 !important; */
+    /* right: 0 !important; */
+    background-color: rgba(255,255,255,1) !important;
+    width: 350px !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 15;
+}
+@media (max-width: 991px) {
+    .navigation#navbar {
+        display: none;
+        height: 122.8px;
+    }
+    .hamburger {
+        display: block;
+        background: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 5px 15px 0px 15px;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none !important;
+    }
 }
 .panel {
     margin: 20px 0;
@@ -29,9 +90,24 @@
     padding: 20px;
 }
 
+/* modal */
 .modal-dialog {
     max-width: 80% !important;
 }
-.modal-dialog .deletenote {
-    
+.modal-dialog .modal-text {
+    display: inline-block;
+}
+.modal-dialog .modal-text p {
+    white-space: pre-line;
+}
+.modal-dialog #deletenote {
+    float: right;
+}
+.modal-dialog .form-group textarea {
+    margin-bottom: 20px;
+}
+.modal-dialog .form-group .form-control:focus {
+    outline: none;
+    border-color: #ced4da;
+    box-shadow: none;
 }

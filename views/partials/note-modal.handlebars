@@ -11,9 +11,11 @@
                 {{#if this.notes}}
                     {{#each this.notes}}
                         <div class="panel panel-default">
-                            <div class="panel-body">
-                                <h4 class=""> {{this.title}}</h4>
-                                <p class=""> {{this.body}}</p>
+                            <div class="panel-body modal-notes">
+                                <div class="modal-text">
+                                    <h4>{{this.title}}</h4>
+                                    <p>{{this.body}}</p>
+                                </div>
                                 <button type="button" class="btn btn-danger" id="deletenote" data-note-id={{this._id}}>X</button>
                             </div>
                         </div>
@@ -26,8 +28,8 @@
                     </div>
                 {{/if}}
                 <div id="noteText{{this._id}}" class="form-group">
-                    <textarea id="titleinput{{this._id}}" class="form-control" rows="1" placeholder="New Title"></textarea>
-                    <textarea id="bodyinput{{this._id}}" class="form-control" rows="4" placeholder="New Note"></textarea>
+                    <textarea id="titleinput{{this._id}}" class="form-control" rows="1" placeholder="Enter a Title"></textarea>
+                    <textarea id="bodyinput{{this._id}}" class="form-control" rows="4" placeholder="Enter Note"></textarea>
                 </div>
 
             </div>
