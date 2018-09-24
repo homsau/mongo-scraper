@@ -18,20 +18,11 @@ $(document).ready(function() {
         $('.navigation').hide();
     }
   }).resize();
-
-  $(".pages").click(function() {
-    if($(".navigation").hasClass("open")) {
-      $(".navigation").animate({height: "toggle"}, {duration: 500});
-      $(".navigation").removeClass("open");
-    }
-  });
-  $(".navigation").click(function(event){
-    event.stopPropagation();
-  });
+  
   // CLOSE MENU WITH ESCAPE KEY //
   $(document).keydown(function(e) { 
     if (e.keyCode == 27 && ($(".navigation").hasClass("open"))) { 
-      $(".navigation").animate({height: "toggle"}, {duration: 500});
+      $(".navigation").slideUp();
       $(".navigation").removeClass("open");
     }
   });
